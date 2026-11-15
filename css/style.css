@@ -925,3 +925,15 @@ img { max-width: 100%; }
 /* Nav hover previews: compact, and ignore the image's own height attribute */
 .dd-menu .pv { width: 200px; }
 .dd-menu .pv img { height: auto; aspect-ratio: 16 / 10; }
+
+/* About: FAQ */
+.faq { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: clamp(32px, 6vw, 96px); align-items: start; }
+.faq-list { border-top: 1px solid var(--line); }
+.faq-item { border-bottom: 1px solid var(--line); }
+.faq-item summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 22px 0; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: "+"; flex: none; font-size: 24px; font-weight: 300; color: var(--txt-2); transition: transform 0.3s var(--ease); }
+.faq-item[open] summary::after { transform: rotate(45deg); }
+.faq-item h3 { margin: 0; font-size: clamp(17px, 1.4vw, 20px); font-weight: 600; letter-spacing: -0.01em; line-height: 1.35; }
+.faq-item p { margin: 0 0 22px; color: var(--txt-2); line-height: 1.7; max-width: 62ch; }
+@media (max-width: 900px) { .faq { grid-template-columns: 1fr; } }
