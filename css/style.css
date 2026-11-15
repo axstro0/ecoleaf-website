@@ -730,8 +730,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 
 /* ---------- Round 9 ---------- */
 /* More projects: ELDC mark on every photo, chips above carousels */
-.pgrid.more .im { position: relative; }
-.pgrid.more .im .chip { position: absolute; left: 16px; top: 16px; z-index: 3; }
+.pgrid--more .im { position: relative; }
+.pgrid--more .im .chip { position: absolute; left: 16px; top: 16px; z-index: 3; }
 .eldc-mark { position: absolute; top: 14px; right: 16px; width: 58px; height: auto; z-index: 3; pointer-events: none;
   filter: drop-shadow(0 1px 6px rgba(0,0,0,0.55)); opacity: 0.92; }
 /* Contact: image only, fading into the form */
@@ -745,9 +745,9 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .pcard .im img.eldc-mark { top: 16px; right: 18px; width: 40px; opacity: 0.88;
   filter: drop-shadow(0 0 6px rgba(255,255,255,0.45)) drop-shadow(0 0 18px rgba(230,235,242,0.28)) drop-shadow(0 1px 3px rgba(0,0,0,0.5)); }
 /* More projects: no zoom on hover (it fought the carousel scroll and caused the flicker) */
-.pgrid.more .pcard .im img,
-.pgrid.more .pcard:hover .im img { transform: none; transition: filter 0.6s var(--ease); }
-.pgrid.more .car .car-track { scroll-behavior: smooth; }
+.pgrid--more .pcard .im img,
+.pgrid--more .pcard:hover .im img { transform: none; transition: filter 0.6s var(--ease); }
+.pgrid--more .car .car-track { scroll-behavior: smooth; }
 /* E-Sakay: show whole photos, no cropping */
 .im--contain { background: radial-gradient(80% 80% at 50% 40%, #2a2c30, var(--g-900)); }
 .im--contain .car-track img { object-fit: contain; }
@@ -914,7 +914,7 @@ img { max-width: 100%; }
 .mnav { overscroll-behavior: contain; -webkit-overflow-scrolling: touch; touch-action: pan-y; }
 .mnav > * { flex-shrink: 0; }
 @media (max-width: 600px) {
-  .hero .eyebrow { color: #fff; }
+
   .logo { gap: 10px; }
   .logo span { display: block; font-size: 12px; }
   .logo span small { font-size: 9.5px; letter-spacing: 0.07em; }
@@ -922,3 +922,6 @@ img { max-width: 100%; }
   .mnav > ul > li > a { font-size: 28px; padding: 13px 0; }
 }
 @media (max-width: 900px) { .logo span { display: block; } }
+/* Nav hover previews: compact, and ignore the image's own height attribute */
+.dd-menu .pv { width: 200px; }
+.dd-menu .pv img { height: auto; aspect-ratio: 16 / 10; }
