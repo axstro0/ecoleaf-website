@@ -1,0 +1,20 @@
+{
+ "name": "Ecoleaf Development Corporation",
+ "short_name": "Ecoleaf",
+ "start_url": "/",
+ "display": "browser",
+ "background_color": "#1b1c1f",
+ "theme_color": "#1b1c1f",
+ "icons": [
+  {
+   "src": "/assets/img/favicon-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "/assets/img/icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  }
+ ]
+}

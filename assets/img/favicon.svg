@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 3900 3900"><rect width="3900" height="3900" fill="#1b1c1f"/><g transform="translate(702.0,1258.8) scale(0.64)">
+<defs>
+<clipPath id="dr"><rect x="2337" y="0" width="2000" height="2200"/></clipPath>
+<clipPath id="cc"><path d="M0,0 H4000 V2200 H0 Z M3610,783 L4000,695 L4000,1460 L3610,1393 Z" clip-rule="evenodd"/></clipPath>
+</defs>
+<g fill="#fff">
+<path d="M72,74 H219 V2077 H72 Z M219,74 H860 V194 H219 Z M219,985 H684 V1104 H219 Z M219,1958 H901 V2077 H219 Z M1007,74 H1155 V2077 H1007 Z M1155,1958 H1704 V2077 H1155 Z M1804,74 H1953 V2078 H1804 Z M1953,74 H2415 V192 H1953 Z M1953,1960 H2415 V2078 H1953 Z"/>
+<path fill-rule="evenodd" clip-path="url(#dr)" d="M1723,1076 A692,1002 0 1 0 3107,1076 A692,1002 0 1 0 1723,1076 Z M1725,1076 A612,884 0 1 0 2949,1076 A612,884 0 1 0 1725,1076 Z"/>
+<path fill-rule="evenodd" clip-path="url(#cc)" d="M2390,1076 A732,1037 0 1 0 3854,1076 A732,1037 0 1 0 2390,1076 Z M2550,1076 A575,917 0 1 0 3700,1076 A575,917 0 1 0 2550,1076 Z"/>
+</g></g></svg>
