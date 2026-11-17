@@ -1,6 +1,6 @@
 {
- "name": "Ecoleaf Development Corporation",
- "short_name": "Ecoleaf",
+ "name": "ELDC – Ecoleaf Development Corporation",
+ "short_name": "ELDC",
  "start_url": "/",
  "display": "browser",
  "background_color": "#1b1c1f",
@@ -15,6 +15,12 @@
    "src": "/assets/img/icon-512.png",
    "sizes": "512x512",
    "type": "image/png"
+  },
+  {
+   "src": "/assets/img/favicon.svg",
+   "sizes": "any",
+   "type": "image/svg+xml"
   }
- ]
+ ],
+ "description": "ELDC (Ecoleaf Development Corporation), a leading construction and development company in the Philippines since 2012."
 }
