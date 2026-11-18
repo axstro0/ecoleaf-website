@@ -15,7 +15,34 @@
     }));
   }
 
-  requestAnimationFrame(() => doc.classList.add('is-ready'));
+  /* Intro: ELDC mark on dark, lifts away, hero fades up (home page only) */
+  const intro = document.querySelector('.intro-screen');
+  const ready = () => doc.classList.add('is-ready');
+  if (intro && doc.classList.contains('intro')) {
+    const quick = doc.classList.contains('intro-quick');
+    const heroImg = document.querySelector('.hero-img');
+    const imgReady = new Promise((res) => {
+      if (!heroImg || heroImg.complete) return res();
+      heroImg.addEventListener('load', res, { once: true });
+      heroImg.addEventListener('error', res, { once: true });
+      setTimeout(res, 2500);
+    });
+    const hold = new Promise((res) => setTimeout(res, quick ? 150 : 1900));
+    if (lenis) lenis.stop();
+    void intro.offsetWidth; setTimeout(() => doc.classList.add('intro-in'), 30);
+    Promise.all([imgReady, hold]).then(() => {
+      doc.classList.add('intro-out');
+      setTimeout(ready, quick ? 250 : 650);
+      setTimeout(() => {
+        doc.classList.add('intro-done');
+        intro.remove();
+        if (lenis) lenis.start();
+        try { sessionStorage.setItem('eldc-intro', '1'); } catch (e) {}
+      }, quick ? 900 : 1700);
+    });
+  } else {
+    requestAnimationFrame(ready);
+  }
 
   /* Header */
   const header = document.querySelector('.header');
