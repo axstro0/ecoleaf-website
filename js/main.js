@@ -15,11 +15,10 @@
     }));
   }
 
-  /* Intro: ELDC mark on dark, lifts away, hero fades up (home page only) */
+  /* Intro (home page): dark screen dissolves into the hero, then headline and nav fade up */
   const intro = document.querySelector('.intro-screen');
   const ready = () => doc.classList.add('is-ready');
   if (intro && doc.classList.contains('intro')) {
-    const quick = doc.classList.contains('intro-quick');
     const heroImg = document.querySelector('.hero-img');
     const imgReady = new Promise((res) => {
       if (!heroImg || heroImg.complete) return res();
@@ -27,18 +26,11 @@
       heroImg.addEventListener('error', res, { once: true });
       setTimeout(res, 2500);
     });
-    const hold = new Promise((res) => setTimeout(res, quick ? 150 : 1900));
     if (lenis) lenis.stop();
-    void intro.offsetWidth; setTimeout(() => doc.classList.add('intro-in'), 30);
-    Promise.all([imgReady, hold]).then(() => {
+    Promise.all([imgReady, new Promise((res) => setTimeout(res, 150))]).then(() => {
       doc.classList.add('intro-out');
-      setTimeout(ready, quick ? 250 : 650);
-      setTimeout(() => {
-        doc.classList.add('intro-done');
-        intro.remove();
-        if (lenis) lenis.start();
-        try { sessionStorage.setItem('eldc-intro', '1'); } catch (e) {}
-      }, quick ? 900 : 1700);
+      setTimeout(ready, 250);
+      setTimeout(() => { doc.classList.add('intro-done'); intro.remove(); if (lenis) lenis.start(); }, 900);
     });
   } else {
     requestAnimationFrame(ready);
