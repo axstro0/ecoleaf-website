@@ -937,3 +937,13 @@ img { max-width: 100%; }
 .faq-item h3 { margin: 0; font-size: clamp(17px, 1.4vw, 20px); font-weight: 600; letter-spacing: -0.01em; line-height: 1.35; }
 .faq-item p { margin: 0 0 22px; color: var(--txt-2); line-height: 1.7; max-width: 62ch; }
 @media (max-width: 900px) { .faq { grid-template-columns: 1fr; } }
+
+/* Profile page (albert-laborte) */
+.team.profile { align-items: start; }
+.profile-copy .lead { font-size: clamp(20px, 1.8vw, 26px); line-height: 1.45; margin: 22px 0 20px; color: var(--txt); }
+.profile-copy p { color: var(--txt-2); line-height: 1.7; margin: 0 0 16px; max-width: 62ch; }
+.profile-copy a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+.facts { width: 100%; border-collapse: collapse; margin-top: 26px; font-size: 15px; }
+.facts th, .facts td { text-align: left; vertical-align: top; padding: 13px 0; border-bottom: 1px solid var(--line); }
+.facts th { width: 34%; padding-right: 16px; font-weight: 600; color: var(--mute); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; }
+.facts td { color: var(--txt); }
