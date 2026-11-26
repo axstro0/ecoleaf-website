@@ -973,11 +973,3 @@ html.intro .hero .fade { transition-delay: 0.45s; }
 .ph-photo > img { position: absolute; inset: 0; }
 .member .ph-photo img[src*="edgardo-laborte"] { object-position: 50% 0%; }
 .member .ph-photo img[src*="albert-laborte"], .pres .ph-photo img[src*="albert-laborte"] { object-position: 50% 22%; }
-
-/* At a glance fact list (home) */
-.glance { margin: 0; border-top: 1px solid var(--line); }
-.glance-row { display: grid; grid-template-columns: 170px 1fr; gap: 24px; padding: 18px 0; border-bottom: 1px solid var(--line); }
-.glance dt { color: var(--txt-2); font-size: 14px; letter-spacing: 0.02em; }
-.glance dd { margin: 0; line-height: 1.6; }
-.glance dd a { text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--line); }
-@media (max-width: 600px) { .glance-row { grid-template-columns: 1fr; gap: 4px; padding: 14px 0; } }
