@@ -974,5 +974,7 @@ html.intro .hero .fade { transition-delay: 0.45s; }
 .member .ph-photo img[src*="edgardo-laborte"] { object-position: 50% 0%; }
 .member .ph-photo img[src*="albert-laborte"], .pres .ph-photo img[src*="albert-laborte"] { object-position: 50% 22%; }
 
-.about-albert .sub + .sub { margin-top: 16px; }
-.about-albert a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+
+.profile-copy .profile-h { margin: 34px 0 12px; color: var(--txt); }
+.profile-copy .profile-links { margin-top: 24px; }
+@media (min-width: 901px) { .profile > .member { position: sticky; top: 110px; align-self: start; } }
